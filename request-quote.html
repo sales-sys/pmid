@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midstar | Request Quote</title>
+    <meta name="description" content="Send your quote request for the selected Midstar products.">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Old+Standard+TT:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/crbftn-premium.css">
+</head>
+<body data-page="quote">
+    <div id="navigation-container"></div>
+
+    <section style="position:relative;min-height:36vh;display:flex;align-items:center;background:linear-gradient(rgba(5,8,14,.73),rgba(5,8,14,.82)),url('assets/images/hero/hero-secondary.webp') center/cover no-repeat;">
+        <div class="section-shell" style="padding:2.7rem 1rem;">
+            <h1 class="heading-brand" style="font-size:clamp(2rem,4.4vw,3.7rem);margin:0;">Request Quote</h1>
+            <p style="margin:.7rem 0 0;color:var(--muted);max-width:720px;">Your cart summary and details will be sent to the team for a fast response.</p>
+        </div>
+    </section>
+
+    <section class="section-shell" style="padding:1.5rem 1rem 2.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1rem;align-items:start;">
+        <div class="premium-card" style="padding:1rem;">
+            <h2 style="margin:0 0 .8rem;">Order Summary</h2>
+            <div id="quote-items-list"></div>
+            <div style="margin-top:.8rem;border-top:1px solid var(--line);padding-top:.8rem;display:grid;gap:.45rem;">
+                <div style="display:flex;justify-content:space-between;color:var(--muted);"><span>Subtotal</span><span id="subtotal-display">R0.00</span></div>
+                <div style="display:flex;justify-content:space-between;color:#8ec9ff;"><span>Launch Discount</span><span id="discount-display">-R0.00</span></div>
+                <div style="display:flex;justify-content:space-between;font-weight:700;"><span>Total</span><span id="quote-total-display">R0.00</span></div>
+            </div>
+        </div>
+
+        <form class="premium-card" style="padding:1rem;display:grid;gap:.7rem;" onsubmit="submitQuoteRequest(event)">
+            <h2 style="margin:0 0 .2rem;">Your Details</h2>
+            <input class="form-input" name="name" required placeholder="Full name">
+            <input class="form-input" type="email" name="email" required placeholder="Email">
+            <input class="form-input" name="phone" required placeholder="Phone number">
+            <textarea class="form-textarea" name="message" rows="4" placeholder="Optional notes"></textarea>
+            <button type="submit" class="btn-primary">Send Quote Request</button>
+        </form>
+    </section>
+
+    <div id="footer-container"></div>
+    <div id="modals-container"></div>
+    <script src="assets/js/script.js" defer></script>
+</body>
+</html>

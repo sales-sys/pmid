@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midstar | Catalog</title>
+    <meta name="description" content="Midstar full catalog page with 17 focused products.">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Old+Standard+TT:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/crbftn-premium.css">
+</head>
+<body data-page="products">
+    <div id="navigation-container"></div>
+
+    <section style="position:relative;min-height:36vh;display:flex;align-items:center;background:linear-gradient(rgba(5,8,15,.72),rgba(5,8,15,.82)),url('assets/images/hero/hero-secondary.webp') center/cover no-repeat;">
+        <div class="section-shell" style="padding:2.8rem 1rem;">
+            <h1 class="heading-brand" style="font-size:clamp(2rem,4vw,3.6rem);margin:0;">Catalog</h1>
+            <p style="margin:.6rem 0 0;color:var(--muted);max-width:720px;">All 17 Prelude pieces in one place. Filter by category and add to cart.</p>
+        </div>
+    </section>
+
+    <section class="section-shell" style="padding:1.4rem 1rem 2.5rem;">
+        <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem;">
+            <button class="filter-btn active" data-filter-btn="all">All</button>
+            <button class="filter-btn" data-filter-btn="hoodies">Hoodies</button>
+            <button class="filter-btn" data-filter-btn="tshirts">T-Shirts</button>
+            <button class="filter-btn" data-filter-btn="pants">Pants</button>
+            <button class="filter-btn" data-filter-btn="jackets">Jackets</button>
+            <button class="filter-btn" data-filter-btn="womens">Women</button>
+            <button class="filter-btn" data-filter-btn="accessories">Accessories</button>
+        </div>
+
+        <div id="products-grid" class="product-grid"></div>
+    </section>
+
+    <div id="footer-container"></div>
+    <div id="modals-container"></div>
+    <script src="assets/js/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+# Keep Netlify Functions reachable
+/.netlify/functions/* /.netlify/functions/:splat 200
+
+# Friendly aliases
+/home /index.html 301
+/home.html /index.html 301
+
+# Static page routes
+/products /products.html 200
+/contact /contact.html 200
+/gallery /gallery.html 200
+/request-quote /request-quote.html 200
+
+# SPA/static fallback
+/* /index.html 200

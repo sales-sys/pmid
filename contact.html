@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midstar | Contact</title>
+    <meta name="description" content="Contact Midstar for product questions, support, and collaboration.">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Old+Standard+TT:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/crbftn-premium.css">
+</head>
+<body data-page="contact">
+    <div id="navigation-container"></div>
+
+    <section style="position:relative;min-height:40vh;display:flex;align-items:center;background:linear-gradient(rgba(4,6,10,.74),rgba(4,6,10,.82)),url('assets/images/hero/contact-hero.webp') center/cover no-repeat;">
+        <div class="section-shell" style="padding:2.8rem 1rem;">
+            <h1 class="heading-brand" style="font-size:clamp(2rem,4.4vw,3.8rem);margin:0;">Contact</h1>
+            <p style="margin:.7rem 0 0;color:var(--muted);max-width:700px;">Send us your question and the team will respond as quickly as possible.</p>
+        </div>
+    </section>
+
+    <section class="section-shell" style="padding:1.6rem 1rem 2.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;align-items:start;">
+        <div class="premium-card" style="padding:1rem;">
+            <h2 style="margin:0 0 .6rem;">Direct</h2>
+            <p style="margin:0 0 .4rem;color:var(--muted);">Email: <a class="nav-link" href="mailto:hello@pmid.co.za">hello@pmid.co.za</a></p>
+            <p style="margin:0 0 .4rem;color:var(--muted);">Phone: <a class="nav-link" href="tel:+27710000000">071 000 0000</a></p>
+            <p style="margin:0;color:var(--muted);">Cape Town, South Africa</p>
+        </div>
+
+        <form class="premium-card" style="padding:1rem;display:grid;gap:.7rem;" onsubmit="submitContactForm(event)">
+            <h2 style="margin:0 0 .2rem;">Send a message</h2>
+            <div style="display:grid;grid-template-columns:1fr;gap:.5rem;">
+                <input class="form-input" name="firstName" required placeholder="First name">
+                <input class="form-input" name="lastName" required placeholder="Last name">
+            </div>
+            <input class="form-input" type="email" name="email" required placeholder="Email">
+            <select class="form-select" name="subject" required>
+                <option value="">Select subject</option>
+                <option value="General">General</option>
+                <option value="Product">Product</option>
+                <option value="Order">Order</option>
+                <option value="Collaboration">Collaboration</option>
+            </select>
+            <textarea class="form-textarea" name="message" rows="5" required placeholder="Your message"></textarea>
+            <button class="btn-primary" type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <div id="footer-container"></div>
+    <div id="modals-container"></div>
+    <script src="assets/js/script.js" defer></script>
+</body>
+</html>
