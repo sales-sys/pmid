@@ -1,0 +1,41 @@
+<div id="cart-overlay" class="hidden modal-sheet">
+    <aside class="modal-card cart-sheet" style="display:flex;flex-direction:column;">
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:1rem;border-bottom:1px solid var(--line);">
+            <h3 style="margin:0;" class="heading-display">Your Cart</h3>
+            <button onclick="toggleCart()" style="background:none;border:none;color:var(--text);font-size:1.1rem;cursor:pointer;">Close</button>
+        </div>
+        <div id="cart-items" style="padding:1rem;display:flex;flex-direction:column;gap:0.6rem;overflow:auto;flex:1;">
+            <p style="color:var(--muted);">Your cart is empty.</p>
+        </div>
+        <div style="border-top:1px solid var(--line);padding:1rem;">
+            <div style="display:flex;justify-content:space-between;margin-bottom:0.8rem;">
+                <span>Total</span>
+                <strong id="cart-total">R0.00</strong>
+            </div>
+            <div style="display:grid;gap:0.55rem;">
+                <button onclick="openCheckoutModal()" class="btn-primary" style="width:100%;">Checkout with Ozow</button>
+                <button onclick="requestQuote()" class="btn-secondary" style="width:100%;">Request Quote Instead</button>
+            </div>
+        </div>
+    </aside>
+</div>
+
+<div id="checkout-overlay" class="hidden modal-sheet">
+    <section class="modal-card checkout-sheet" style="padding:1rem;">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:0.7rem;margin-bottom:0.6rem;">
+            <h3 class="heading-display" style="margin:0;">Secure Checkout</h3>
+            <button onclick="closeCheckoutModal()" style="background:none;border:none;color:var(--text);font-size:1.1rem;cursor:pointer;">Close</button>
+        </div>
+
+        <p style="margin:0 0 0.85rem;color:var(--muted);font-size:0.9rem;">You'll be redirected to Ozow's secure payment page to complete payment with your preferred method.</p>
+
+        <form id="checkout-form" onsubmit="submitOzowCheckout(event)" style="display:grid;gap:0.6rem;">
+            <input class="form-input" name="name" required placeholder="Full name">
+            <input class="form-input" name="email" type="email" required placeholder="Email address">
+            <input class="form-input" name="phone" required placeholder="Phone number">
+            <button id="checkout-submit-btn" type="submit" class="btn-primary" style="width:100%;">Proceed to Ozow</button>
+        </form>
+
+        <p style="margin:0.7rem 0 0;color:var(--muted);font-size:0.78rem;">Card and banking details are captured directly by Ozow for security and PCI compliance.</p>
+    </section>
+</div>
